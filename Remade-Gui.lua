@@ -97,7 +97,7 @@ local TPTab = Window:CreateTab("Teleports", 11457411382)
 --Teleport Buttons
 
 local Button = TPTab:CreateButton({
-	Name = "Forge",
+	Name = "Forge(May cause magic circles to dissapear)",
 	Callback = function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1385.45911, 45293.6406, 2113.73486, -0.00195229053, 4.78691042e-08, -0.999998093, 9.7509667e-11, 1, 4.78690048e-08, 0.999998093, -4.05527738e-12, -0.00195229053)
 	end,
