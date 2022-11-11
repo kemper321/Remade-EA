@@ -24,7 +24,7 @@ local Window = Rayfield:CreateWindow({
 		Subtitle = "Key System",
 		Note = "Join the discord (discord.gg/gq9uxZnr78)",
 		FileName = "SiriusKey",
-		SaveKey = false,
+		SaveKey = true,
 		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
 		Key = "avgot"
 	}
@@ -97,7 +97,7 @@ local TPTab = Window:CreateTab("Teleports", 11457411382)
 --Teleport Buttons
 
 local Button = TPTab:CreateButton({
-	Name = "Forge(May cause magic circles to dissapear)",
+	Name = "Forge",
 	Callback = function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1385.45911, 45293.6406, 2113.73486, -0.00195229053, 4.78691042e-08, -0.999998093, 9.7509667e-11, 1, 4.78690048e-08, 0.999998093, -4.05527738e-12, -0.00195229053)
 	end,
@@ -138,26 +138,28 @@ local Button = TPTab:CreateButton({
 	end,
 })
 
-local Button = TpTab:CreateButton({
-	Name = "Mountain Top(in progress)",
-		Callback = function()
-			game.Player.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new()
-		end,
+local Button = TPTab:CreateButton({
+	Name = "Plains",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1933.93311, 338.7901, 1532.54871, -0.181160286, 6.87985775e-08, -0.983453572, -6.58040307e-08, 1, 8.20777473e-08, 0.983453572, 7.95844386e-08, -0.181160286)
+	end,
 })
 
-local Button = TPTab:CreateBUtton({
-	Name = "Plains(in progress)",
-		Cllback = function()
-			game.Player.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new()
-		end,
+local Button = TPTab:CreateButton({
+	Name = "Mounatain Top",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2006.15576, 1469.57385, 2115.41577, -0.899172068, -3.2504488e-09, -0.437595218, -7.93062227e-10, 1, -5.79839377e-09, 0.437595218, -4.8667137e-09, -0.899172068)
+	end,
 })
+
+
 
 --Miscellaneous
 
 local Misc = Window:CreateTab("Miscellaneous", 11457411382)
 
 local Button = Misc:CreateButton({
-	Name = "Infinite Yiff",
+	Name = "Infinite Yiff(Can't close gui, unless reexecuted)",
 	Callback = function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end,
@@ -201,6 +203,13 @@ local Button = Misc:CreateButton({
                Teleport(Mouse.Hit.p)
            end
         end)
+	end,
+})
+
+local Button = Misc:CreateButton({
+	Name = "Destroy gui",
+	Callback = function()
+		Rayfield:Destroy()
 	end,
 })
 
