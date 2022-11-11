@@ -159,9 +159,11 @@ local Button = TPTab:CreateButton({
 local Misc = Window:CreateTab("Miscellaneous", 11457411382)
 
 local Button = Misc:CreateButton({
-	Name = "Infinite Yiff(Can't close gui, unless reexecuted)",
+	Name = "Infinite Yiff(rexecutes gui)",
 	Callback = function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+		Rayfield:Destroy()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/kemper321/Remade-EA/main/Remade-Gui.lua'),true))()
 	end,
 })
 
