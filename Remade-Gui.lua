@@ -1,3 +1,5 @@
+-- Creataiing the Gui
+
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 --Window
@@ -136,6 +138,20 @@ local Button = TPTab:CreateButton({
 	end,
 })
 
+local Button = TpTab:CreateButton({
+	Name = "Mountain Top(in progress)",
+		Callback = function()
+			game.Player.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new()
+		end,
+})
+
+local Button = TPTab:CreateBUtton({
+	Name = "Plains(in progress)",
+		Cllback = function()
+			game.Player.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new()
+		end,
+})
+
 --Miscellaneous
 
 local Misc = Window:CreateTab("Miscellaneous", 11457411382)
@@ -193,6 +209,6 @@ local Button = Misc:CreateButton({
 local CTab = Window:CreateTab("Credits", 9579346890) -- Title, Image
 
 --Credit labels
-
+local Label = CTab:CreateLabel("Made by Xxginger_slayrxX")
 local Label = CTab:CreateLabel("Creator -- Xxginger_slayrxX")
 local Label = CTab:CreateLabel("Helped with design -- Cap_Raven")
